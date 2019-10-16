@@ -70,6 +70,10 @@ public class PricingServiceImpl implements PricingService{
 	@Override
 	public void removePricingById(int id)
 	         throws PricingNotFoundException {
-	}
 
+		if(!pricingRepository.existsById(id)) throw new PricingNotFoundException("There is no pricing"); 
+		pricingRepository.deleteById(id);
+			
+	}
+				
 }

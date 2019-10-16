@@ -27,6 +27,8 @@ public class Pricing {
     
 
     private BigDecimal rate;
+    
+    private BigDecimal fees;
 
     public int getId() {
 
@@ -99,5 +101,13 @@ public class Pricing {
         this.rate = rate;
 
     }
+
+	public BigDecimal getFees() {
+		return fees;
+	}
+
+	public void setFees(BigDecimal fees) {
+		this.fees = fees;
+	}
 
 }
